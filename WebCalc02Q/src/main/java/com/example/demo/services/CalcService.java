@@ -44,6 +44,22 @@ public class CalcService {
 		
 		return AdResult;
 	}
+	
+	public String calculatedivide( String NumA,String NumB) {
+		
+		
+		BigDecimal AdA = new BigDecimal(NumA);
+		BigDecimal AdB = new BigDecimal(NumB);
+		
+		try {
+		BigDecimal AdR = AdA.divide(AdB);
+		String AdResult = AdR.toString();
+		
+		return AdResult;
+		} catch (Exception e){
+			return "無限小数の答えになりました";
+		}
+	}
 
 	//		割り算に関しては特殊なので注意
 	//		
